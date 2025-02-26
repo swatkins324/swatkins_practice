@@ -1,0 +1,10 @@
+---
+# tasks file for configure_website
+#
+- name: Copy website over to /var/www/html/
+  ansible.builtin.copy:
+    src: website.txt
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: '0644'
