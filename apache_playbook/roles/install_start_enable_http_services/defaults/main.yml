@@ -1,0 +1,6 @@
+---
+# defaults file for install_start_enable_http_services
+
+apache_packages:
+  - httpd
+  - firewalld

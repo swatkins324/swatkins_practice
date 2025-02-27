@@ -1,0 +1,9 @@
+---
+# tasks file for configure_firewall
+#
+- name: Add http service to firewall
+  ansible.posix.firewalld:
+    service: http
+    state: enabled
+    immediate: true
+    permanent: true

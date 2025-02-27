@@ -1,0 +1,14 @@
+---
+# tasks file for install_start_enable_http_services
+#
+- name: Install apache packages
+  ansible.builtin.yum:
+    name: "{{ apache_packages }}"
+    state: installed
+
+- name: Start and Enable apache services
+  ansible.builtin.service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  loop: "{{ apache_packages }}"

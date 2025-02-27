@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true
+  become_user: root
+  become_method: sudo
+  roles:
+  - install_start_enable_http_services
+  - configure_firewall
+  - configure_website
